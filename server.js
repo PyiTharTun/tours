@@ -10,11 +10,11 @@ if (process.env.NODE_ENV == "development") {
   app.use(morgan("tiny"));
   console.log("Here....Development");
 }
-
+// var mongoUrl = `mongodb+srv://pyithartun:${process.env.DB_pw}@newmornietours.nejsm2t.mongodb.net/MornieTours?retryWrites=true&w=majority`;
 var mongoUrl = `mongodb+srv://pyithartun:${process.env.DB_pw}@newmornietours.nejsm2t.mongodb.net/MornieTours?retryWrites=true&w=majority`;
-
+// DB_pw=reRfak-qeqdaw-junja3
 mongoose.connect(mongoUrl).then((con) => {
-  // console.log(con.connection);
+  console.log(con.connection);
   console.log("Mongo connect successful");
 });
 
